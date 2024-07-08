@@ -1,0 +1,16 @@
+name: utn-test
+on:
+  workflow_dispatch:
+jobs:
+  utn-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v6.5.0
+        with:
+          #spec: cypress/e2e#/*
+          browser: chrome
