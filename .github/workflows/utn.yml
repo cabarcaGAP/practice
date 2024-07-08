@@ -1,4 +1,4 @@
-name: utn-test
+name: utn-test-automatic-exec
 on:
     schedule:
     - cron: "*/10 * * * *"
