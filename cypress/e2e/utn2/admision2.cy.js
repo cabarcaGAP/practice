@@ -1,4 +1,4 @@
-describe('Home', () => {
+describe('Admision', () => {
 
     it('Contenido Principal', () => {
         cy.visit('/admision')
