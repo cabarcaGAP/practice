@@ -1,0 +1,22 @@
+name: utn-test-manual
+on:
+    workflow_dispatch:
+jobs:
+  utn-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v6.5.0
+        with:
+          #spec: cypress/e2e#/*
+          browser: chrome
+      - name: upload
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+            name: cypress-videos
+            path: cypress
