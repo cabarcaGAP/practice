@@ -12,7 +12,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6.5.0
         with:
-          #spec: cypress/e2e/*
+          spec: cypress/e2e/auto-practice1/
           browser: chrome
       - name: upload
         uses: actions/upload-artifact@v4
