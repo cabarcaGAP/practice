@@ -21,3 +21,6 @@ jobs:
             name: cypress-videos
             path: cypress/videos
             retention-days: 2
+        env:
+          # pass the Cypress Cloud record key as an environment variable
+          PASS_ONE: ${{ secrets.PASS_ONE }}
