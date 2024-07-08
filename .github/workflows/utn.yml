@@ -15,3 +15,9 @@ jobs:
         with:
           #spec: cypress/e2e#/*
           browser: chrome
+      - name: upload
+        uses: actions/upload-artifact@v1
+        if: always()
+        with:
+            name: cypress-videos
+            path: cypress/videos
