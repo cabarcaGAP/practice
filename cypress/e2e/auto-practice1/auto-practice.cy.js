@@ -18,7 +18,7 @@ describe('Student login', () => {
 
     it('can login with Secret Password - COPYTEST!', () => {
         cy.get('#username').type('student')
-        cy.get('#password').type(`${Cypress.env('PASS_ONE')}`)
+        cy.get('#password').type(`${Cypress.env('PASS_ONE')}`, { log: false })
         cy.get('#submit').click()
         cy.contains('Logged In Successfully')
     })
